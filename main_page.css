@@ -1,0 +1,68 @@
+/*1vh = 1% of the viewport's height*/
+/*1vw = 1% of the viewport's width*/
+/*Tænker at de 2 ovenstående length units er bedst generelt, da den tager efter størrelsen på skærmen*/
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: auto;
+    background-color: lightgoldenrodyellow;
+}
+.nav {
+    display: flex;
+
+}
+.nav ul {
+    margin-left: auto;
+}
+.nav li {
+    display: inline;
+    margin-right: 0.5vw;
+}
+.nav li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#about-me {
+    background-color: lightgray;
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
+}
+
+.about-me-text-container {
+    margin-right: 5vw;
+    width: 50%;
+    margin: 3vh 3vw 3vh 3vw;
+}
+
+.profilephoto {
+    margin: 3vh 3vw 3vh 3vw;
+}
+
+.in-common-container {
+    display: flex;
+    flex-direction: row;
+    background-color: lightblue;
+}
+.project-container {
+    width: 50%;
+    background-color: orange;
+    margin: 3vh 3vw 3vh 3vw;
+}
+.skills-container {
+    margin: 3vh 3vw 3vh 3vw;
+    height: auto;
+    width: 50%;
+    background-color: peru;
+}
+
+footer p {
+    text-align: center;
+}
