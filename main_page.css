@@ -2,7 +2,13 @@
 /*1vw = 1% of the viewport's width*/
 /*Tænker at de 2 ovenstående length units er bedst generelt, da den tager efter størrelsen på skærmen
    OBS jeg kan tage fejl xD måske EM eller REM er bedst??? */
-body {
+   img,
+   picture,
+   video {
+     max-width: 100%;
+   }
+
+   body {
     display: flex;
     flex-direction: column;
     max-width: 900px;
@@ -66,11 +72,37 @@ body {
 }
 
 /*OBS hvordan for jeg nedenstående loggo til at blive mindre???*/
+.ul-skills::marker {
+    font-size: 5px;
+}
+.ul-skills li {
+    margin-bottom: 5px;
+    padding: 2px;
+}
 
 li.img_html::marker {
-    content: url(./resources/HTML5_logo_and_wordmark.svg.png);
-    font-size: 10px;
+    content: url(./resources/15pxHTML5_logo_and_wordmark.svg.png);
 
+}
+
+li.img_css::marker {
+    content: url(./resources/15px-CSS3_logo_and_wordmark.svg.png);   
+}
+
+li.img_cloud::marker {
+    content: url(./resources/15px\ Microsoft_Office_OneDrive_\(2019–present\).svg.png);   
+}
+
+li.img_js::marker {
+    content: url(./resources/15px\ Unofficial_JavaScript_logo_2.svg.png);
+}
+
+li.img_git::marker {
+    content: url(./resources/15\ pxGit-Icon-1788C.png);
+}
+
+li.img_github::marker {
+    content: url(./resources/Github\ logo\ 15px.png);
 }
 
 footer p {
