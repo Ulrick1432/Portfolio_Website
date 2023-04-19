@@ -72,10 +72,11 @@
 }
 
 /*OBS hvordan for jeg nedenstående loggo til at blive mindre???*/
+/*Det gjorde jeg ved at rediger selve billedet*/
 
 .ul-skills li {
     margin-bottom: 5px;
-    padding: 2px;
+    padding-left: 5px;
 }
 
 li.img_html::marker {
