@@ -66,6 +66,17 @@
     background-color: orange;
     margin: 3vh 3vw 3vh 3vw;
 }
+
+.element_details_projects {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/*Nedenstående list-style property removes the disclosure triangle - 
+måske den skal laves til et symbol herfra https://coolsymbol.com/*/
+.element_details_projects summary{
+    list-style: none;
+}
 /*skills section*/
 .skills-container {
     margin: 3vh 3vw 3vh 3vw;
