@@ -1,12 +1,21 @@
 //Enable dropdown menus
 //Let users toggle between light and dark mode https://dcodemania.com/post/switch-dark-light-mode-css-javascript
 //alert("det virker");
-const modeBtn = document.getElementById('dark_mode_button');
+const colorSwitch = document.getElementById('input-color-switch');
+colorSwitch.addEventListener('click', checkMode);
 
-//nedenstående function tilføjer en class til et element, når der klikkes
-// på mode knappen.
-modeBtn.onclick = () => {
-    modeBtn.classList.toggle('dark-mode');
-}
+function checkMode() {
+    if(colorSwitch.checked) {
+        darkModeOn();
+    } else {
+        darkModeOff();
+    };
+};
 
+function darkModeOn() {
+    document.body.classList.add('dark-mode');
+};
 
+function darkModeOff() {
+    document.body.classList.remove('dark-mode');
+};

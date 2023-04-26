@@ -2,6 +2,7 @@
 /*1vw = 1% of the viewport's width*/
 /*Tænker at de 2 ovenstående length units er bedst generelt, da den tager efter størrelsen på skærmen
    OBS jeg kan tage fejl xD måske EM eller REM er bedst??? */
+/*Der mangler også at blive stylet farver, hvilket jeg ikke er god til :D*/
    img,
    picture,
    video {
@@ -13,9 +14,10 @@
     flex-direction: column;
     max-width: 900px;
     margin: auto;
-    background-color: var(--rootBlack, lightgoldenrodyellow);
-}
+    background-color: var(--darkblack, var(--lightgoldenrodyellow));
+    color: var(--white);
 
+}
 
 /*Navigation section*/
 .nav {
@@ -25,6 +27,7 @@
 
 .nav ul {
     margin-left: auto;
+    color: var(--white);
 }
 .nav li {
     display: inline-block;
@@ -32,14 +35,22 @@
 }
 .nav li a {
     text-decoration: none;
-    color: black;
+    color: var(--white);
 
 }
-/*button dark mode section*/
-/*Det er muligt at bruge CSS custom properties (variables)
-https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
-https://www.color-meanings.com/dark-colors/
-ved fx at have følgende som standard:*/
+/*input dark mode section*/
+.dark-mode {
+    --darkblack: #000;
+    --charcoal: #36454F;
+    --gray: #808080;
+    --russet: #80461B;
+    --Tyrian_Purple: #66023C;
+    --Navy_Blue: #000080;
+    --Burgundy: #800020;
+    --Hunter_Green: #355E3B;
+    --white: white;
+}
+/*Orther variable colors/variable properties*/
 :root {
     --lightgoldenrodyellow: lightgoldenrodyellow;
     --rootBlack: black;
@@ -47,31 +58,10 @@ ved fx at have følgende som standard:*/
     --orange: orange;
     --peru: peru;
 }
-.dark-mode {
-    --darkblack: #000000;
-    --charcoal: #36454F;
-    --gray: #808080;
-    --russet: #80461B;
-    --Tyrian Purple: #66023C;
-    --Navy Blue: #000080;
-    --Burgundy: #800020;
-    --Hunter Green: #355E3B;
-}
-/*
-OBS :root er for de farver der bruges nu. og .dark-mode er de farver 
-der skal bruge ved dark-mode
-Ovenstående kan muligvis bruges på nedenstående måde:
-background-color: var(--black, --lightgoldenrodyellow);
-ovenstående betyder at background-color skal være variablen black, hvis den 
-er undefined skal den bruge lightgoldenyellow i stedet.
-Dette kunne være en god måde at ændre farven på de forskellige når 
-.dark-mode er slået til - lige nu står der active i JS men der skal så istedet
-stå dark-mode for at dette virker. så vil dark-mode variablen kun være defined
-når man får klikket på knappen.
-*/
+
 /*About me section*/
 #about-me {
-    background-color: lightgray;
+    background-color: var(--gray, var(--lightgray));
 }
 
 .about-me-container {
