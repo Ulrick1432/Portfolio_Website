@@ -13,7 +13,7 @@
     flex-direction: column;
     max-width: 900px;
     margin: auto;
-    background-color: lightgoldenrodyellow;
+    background-color: var(--rootBlack, lightgoldenrodyellow);
 }
 
 
@@ -39,16 +39,16 @@
 /*Det er muligt at bruge CSS custom properties (variables)
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 https://www.color-meanings.com/dark-colors/
-ved fx at have følgende som standard:
+ved fx at have følgende som standard:*/
 :root {
     --lightgoldenrodyellow: lightgoldenrodyellow;
-    --black: black;
+    --rootBlack: black;
     --lightgray: lightgray;
     --orange: orange;
     --peru: peru;
 }
 .dark-mode {
-    --black: #000000;
+    --darkblack: #000000;
     --charcoal: #36454F;
     --gray: #808080;
     --russet: #80461B;
@@ -57,7 +57,7 @@ ved fx at have følgende som standard:
     --Burgundy: #800020;
     --Hunter Green: #355E3B;
 }
-
+/*
 OBS :root er for de farver der bruges nu. og .dark-mode er de farver 
 der skal bruge ved dark-mode
 Ovenstående kan muligvis bruges på nedenstående måde:
